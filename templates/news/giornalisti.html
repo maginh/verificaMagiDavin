@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block contenuti %}
+<h5 class="my-3">Elenco articoli:</h5>
+<div class="my-3"></div>
+    {% for giornalisti in newsgiornalistimodel_list %}
+    <p>{{ forloop.counter }})<a>{{ giornalisti.nome }}</a><br>
+        </p>
+    {% endfor %}
+{% endblock contenuti %}
