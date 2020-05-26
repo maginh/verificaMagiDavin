@@ -19,7 +19,7 @@ class newsGiornalistiModel(models.Model):
 class newsArticoliModel(models.Model):
     titolo = models.CharField(max_length=100)
     contenuto = models.TextField()
-    autore = models.ForeignKey(newsGiornalistiModel, on_delete=models.CASCADE, related_name="post")
+    autore = models.ForeignKey(newsGiornalistiModel, on_delete=models.CASCADE, related_name="articoli")
    # data_creazione = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

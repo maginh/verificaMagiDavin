@@ -3,7 +3,8 @@
 <h5 class="my-3">Elenco articoli:</h5>
 <div class="my-3"></div>
     {% for giornalisti in newsgiornalistimodel_list %}
-    <p>{{ forloop.counter }})<a>{{ giornalisti.nome }}</a><br>
-        </p>
+    <p>{{ forloop.counter }})
+        <a href="{% url 'news:lista_articoli_giornalista' pk=giornalisti.id %}">{{ giornalisti.nome }}</a>
+    </p>
     {% endfor %}
 {% endblock contenuti %}

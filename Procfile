@@ -1,0 +1,1 @@
+web: gunicorn verificaMagiDavin.wsgi --log-file - 
